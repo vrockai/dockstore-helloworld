@@ -10,7 +10,7 @@ dct:creator:
 
 requirements:
   - class: DockerRequirement
-    dockerPull: "vrockai/dockstore-helloworld"
+    dockerPull: "quay.io/vrockai/dockstore-helloworld"
 
 inputs:
   pwd:
