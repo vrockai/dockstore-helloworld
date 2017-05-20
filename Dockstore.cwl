@@ -5,7 +5,8 @@ label: "Hello world dockstore container"
 cwlVersion: v1.0
 
 dct:creator:
-  foaf:name: Viliam Rockai
+  "@id": "viliam.rockai@gmail.com"
+  foaf:name: "Viliam Rockai"
 
 requirements:
   - class: DockerRequirement
