@@ -1,7 +1,11 @@
 class: CommandLineTool
+doc: "Test"
 id: "HelloWorld"
 label: "Hello world dockstore container"
 cwlVersion: v1.0
+
+dct:creator:
+  foaf:name: Viliam Rockai
 
 requirements:
   - class: DockerRequirement
@@ -24,3 +28,7 @@ outputs:
     doc: "A txt file with specified folder listing."
 
 baseCommand: ["bash", "/usr/bin/dockstore_ls"]
+
+$namespaces:
+  dct: http://purl.org/dc/terms/
+  foaf: http://xmlns.com/foaf/0.1/
