@@ -1,24 +1,11 @@
 class: CommandLineTool
 id: "HelloWorld"
 label: "Hello world dockstore container"
-cwlVersion: v1.0 
-description: |
-    A simple Dockstore container printing out the "Hello World!" message.
-
-dct:creator:
-  foaf:name: Viliam Rockai
-  foaf:mbox: "mailto:viliam.rockai@gmail.com"
+cwlVersion: v1.0
 
 requirements:
   - class: DockerRequirement
     dockerPull: "vrockai/dockstore-helloworld"
-
-hints:
-  - class: ResourceRequirement
-    coresMin: 1
-    ramMin: 4092
-    outdirMin: 512000
-    doc: "the process requires at least 4G of RAM"
 
 inputs:
   pwd:
@@ -29,11 +16,11 @@ inputs:
       position: 1
 
 outputs:
-  bamstats_report:
+  ls_report:
     type: File
     format: "http://edamontology.org/format_2330"
     outputBinding:
       glob: listing.txt
     doc: "A txt file with specified folder listing."
 
-baseCommand: ["bash", "/usr/bin/ls"]
+baseCommand: ["bash", "/usr/bin/dockstore_ls"]
